@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="borderPane_main" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="1000.0" prefWidth="1900.0" style="-fx-background-color: #ffe4e4;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.gui.controllers.MainSceneController">
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="32.0" prefWidth="1900.0" style="-fx-background-color: coral;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="cmd_add" mnemonicParsing="false" prefHeight="39.0" style="-fx-background-color: transparent;" stylesheets="/styles/cmd_button.css" text="Add">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="cmd_clear" mnemonicParsing="false" prefHeight="39.0" style="-fx-background-color: transparent;" stylesheets="/styles/cmd_button.css" text="Clear">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button fx:id="cmd_show" mnemonicParsing="false" prefHeight="39.0" style="-fx-background-color: transparent;" stylesheets="/styles/cmd_button.css" text="Show">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="cmd_script" mnemonicParsing="false" prefHeight="39.0" style="-fx-background-color: transparent;" stylesheets="/styles/cmd_button.css" text="Script">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+             <Button fx:id="cmd_changeColors" mnemonicParsing="false" prefHeight="39.0" style="-fx-background-color: transparent;" stylesheets="/styles/cmd_button.css" text="Change colors">
+                 <font>
+                     <Font size="18.0" />
+                 </font>
+             </Button>
+             <Button fx:id="cmd_exit" mnemonicParsing="false" prefHeight="39.0" style="-fx-background-color: transparent;" stylesheets="/styles/cmd_button.css" text="Exit">
+                 <font>
+                     <Font size="18.0" />
+                 </font>
+             </Button>
+         </children>
+      </HBox>
+   </bottom>
+   <top>
+      <HBox prefHeight="26.0" prefWidth="1900.0" style="-fx-background-color: coral" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar fx:id="mnBar" maxWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="26.0" prefWidth="831.0" style="-fx-background-color: coral" stylesheets="/styles/menu.css" HBox.hgrow="ALWAYS">
+              <menus>
+                  <Menu fx:id="mn_profile" mnemonicParsing="false" text="Profile">
+                    <items>
+                        <Menu fx:id="mn_history" mnemonicParsing="false" text="History">
+                           <graphic>
+                              <ListView fx:id="lv_history" prefHeight="120.0" prefWidth="200.0" />
+                           </graphic>
+                        </Menu>
+                        <CustomMenuItem fx:id="mi_profile" mnemonicParsing="false">
+                           <content>
+                               <AnchorPane xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
+                                   <children>
+                                       <BorderPane AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+                                           <bottom>
+                                               <BorderPane prefHeight="30.0" BorderPane.alignment="CENTER">
+                                                   <bottom>
+                                                       <BorderPane prefHeight="33.0" BorderPane.alignment="CENTER">
+                                                           <center>
+                                                               <Button fx:id="btn_logOut" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="121.0" style="-fx-background-color: coral;" text="Log out" textFill="WHITE" BorderPane.alignment="CENTER">
+                                                                   <font>
+                                                                       <Font name="System Bold" size="14.0" />
+                                                                   </font>
+                                                               </Button>
+                                                           </center>
+                                                       </BorderPane>
+                                                   </bottom>
+                                               </BorderPane>
+                                           </bottom>
+                                           <top>
+                                               <HBox alignment="CENTER" prefHeight="42.0" prefWidth="310.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                       <Label fx:id="lbl_user" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="30.0" text="User">
+                                                           <font>
+                                                               <Font name="System Bold" size="14.0" />
+                                                           </font>
+                                                           <padding>
+                                                               <Insets right="10.0" />
+                                                           </padding>
+                                                       </Label>
+                                                       <TextField fx:id="tf_user" editable="false" prefHeight="30.0" HBox.hgrow="ALWAYS">
+                                                           <font>
+                                                               <Font size="14.0" />
+                                                           </font>
+                                                       </TextField>
+                                                   </children>
+                                                   <BorderPane.margin>
+                                                       <Insets left="10.0" right="10.0" />
+                                                   </BorderPane.margin>
+                                               </HBox>
+                                           </top>
+                                           <center>
+                                               <HBox alignment="CENTER" prefHeight="50.0" prefWidth="310.0" BorderPane.alignment="CENTER">
+                                                   <children>
+                                                       <Label fx:id="lbl_numOfObjects" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="30.0" text="Objects">
+                                                           <font>
+                                                               <Font name="System Bold" size="14.0" />
+                                                           </font>
+                                                           <padding>
+                                                               <Insets right="10.0" />
+                                                           </padding>
+                                                       </Label>
+                                                       <TextField fx:id="tf_numOfObjects" editable="false" HBox.hgrow="ALWAYS">
+                                                           <font>
+                                                               <Font name="System Bold" size="14.0" />
+                                                           </font>
+                                                       </TextField>
+                                                   </children>
+                                                   <BorderPane.margin>
+                                                       <Insets left="10.0" right="10.0" />
+                                                   </BorderPane.margin>
+                                               </HBox>
+                                           </center>
+                                       </BorderPane>
+                                   </children>
+                               </AnchorPane>
+                           </content>
+                        </CustomMenuItem>
+                    </items>
+                  </Menu>
+                  <Menu fx:id="mn_language" mnemonicParsing="false" text="Language">
+                     <items>
+                        <MenuItem mnemonicParsing="false">
+                           <graphic>
+                              <ChoiceBox fx:id="cb_lang" prefWidth="150.0" />
+                           </graphic>
+                        </MenuItem>
+                     </items>
+                  </Menu>
+                <Menu fx:id="mn_help" mnemonicParsing="false" text="Help">
+                  <items>
+                        <Menu fx:id="mn_help_help" mnemonicParsing="false" text="Help">
+                           <items>
+                              <Menu fx:id="mn_help_table" mnemonicParsing="false" text="Table">
+                                 <items>
+                                    <CustomMenuItem mnemonicParsing="false">
+                                       <content>
+                                          <TextArea fx:id="ta_table" editable="false" prefWidth="400.0" wrapText="true">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </TextArea>
+                                       </content>
+                                    </CustomMenuItem>
+                                 </items>
+                              </Menu>
+                              <Menu fx:id="mn_help_visualisation" mnemonicParsing="false" text="Visualisation">
+                                  <items>
+                                      <CustomMenuItem mnemonicParsing="false">
+                                          <content>
+                                              <TextArea fx:id="ta_visualisation" editable="false" prefWidth="400.0" wrapText="true">
+                                                  <font>
+                                                      <Font name="System Bold" size="14.0" />
+                                                  </font>
+                                              </TextArea>
+                                          </content>
+                                      </CustomMenuItem>
+                                  </items>
+                              </Menu>
+                              <Menu fx:id="mn_help_ObjectContextMenu" mnemonicParsing="false" text="Object context menu">
+                                 <items>
+                                    <Menu fx:id="mn_help_info" mnemonicParsing="false" text="Info">
+                                        <items>
+                                            <CustomMenuItem mnemonicParsing="false">
+                                                <content>
+                                                    <TextArea fx:id="ta_info" editable="false" prefWidth="400.0" wrapText="true">
+                                                        <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                        </font>
+                                                    </TextArea>
+                                                </content>
+                                            </CustomMenuItem>
+                                        </items>
+                                    </Menu>
+                                    <Menu fx:id="mn_help_edit" mnemonicParsing="false" text="Edit">
+                                        <items>
+                                            <CustomMenuItem mnemonicParsing="false">
+                                                <content>
+                                                    <TextArea fx:id="ta_edit" editable="false" prefWidth="400.0" wrapText="true">
+                                                        <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                        </font>
+                                                    </TextArea>
+                                                </content>
+                                            </CustomMenuItem>
+                                        </items>
+                                    </Menu>
+                                    <Menu fx:id="mn_help_update" mnemonicParsing="false" text="Update">
+                                        <items>
+                                            <CustomMenuItem mnemonicParsing="false">
+                                                <content>
+                                                    <TextArea fx:id="ta_update" editable="false" prefWidth="400.0" wrapText="true">
+                                                        <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                        </font>
+                                                    </TextArea>
+                                                </content>
+                                            </CustomMenuItem>
+                                        </items>
+                                    </Menu>
+                                    <Menu fx:id="mn_help_remove" mnemonicParsing="false" text="Remove">
+                                        <items>
+                                            <CustomMenuItem mnemonicParsing="false">
+                                                <content>
+                                                    <TextArea fx:id="ta_remove" editable="false" prefWidth="400.0" wrapText="true">
+                                                        <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                        </font>
+                                                    </TextArea>
+                                                </content>
+                                            </CustomMenuItem>
+                                        </items>
+                                    </Menu>
+                                    <Menu fx:id="mn_help_removeGreaterThis" mnemonicParsing="false" text="Remove greater this">
+                                        <items>
+                                            <CustomMenuItem mnemonicParsing="false">
+                                                <content>
+                                                    <TextArea fx:id="ta_removeGreaterThis" editable="false" prefWidth="400.0" wrapText="true">
+                                                        <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                        </font>
+                                                    </TextArea>
+                                                </content>
+                                            </CustomMenuItem>
+                                        </items>
+                                    </Menu>
+                                    <Menu fx:id="mn_help_countBySoundtrackName" mnemonicParsing="false" text="Count by soundtrack name">
+                                        <items>
+                                            <CustomMenuItem mnemonicParsing="false">
+                                                <content>
+                                                    <TextArea fx:id="ta_countBySoundtrackName" editable="false" prefWidth="400.0" wrapText="true">
+                                                        <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                        </font>
+                                                    </TextArea>
+                                                </content>
+                                            </CustomMenuItem>
+                                        </items>
+                                    </Menu>
+                                 </items>
+                              </Menu>
+                              <Menu fx:id="mn_help_collectionControlBar" mnemonicParsing="false" text="Collection control bar">
+                                 <items>
+                                    <Menu fx:id="mn_help_add" mnemonicParsing="false" text="Add">
+                                        <items>
+                                            <CustomMenuItem mnemonicParsing="false">
+                                                <content>
+                                                    <TextArea fx:id="ta_add" editable="false" prefWidth="400.0" wrapText="true">
+                                                        <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                        </font>
+                                                    </TextArea>
+                                                </content>
+                                            </CustomMenuItem>
+                                        </items>
+                                    </Menu>
+                                    <Menu fx:id="mn_help_clear" mnemonicParsing="false" text="Clear">
+                                        <items>
+                                            <CustomMenuItem mnemonicParsing="false">
+                                                <content>
+                                                    <TextArea fx:id="ta_clear" editable="false" prefWidth="400.0" wrapText="true">
+                                                        <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                        </font>
+                                                    </TextArea>
+                                                </content>
+                                            </CustomMenuItem>
+                                        </items>
+                                    </Menu>
+                                    <Menu fx:id="mn_help_myObjects" mnemonicParsing="false" text="My objects">
+                                        <items>
+                                            <CustomMenuItem mnemonicParsing="false">
+                                                <content>
+                                                    <TextArea fx:id="ta_myObjects" editable="false" prefWidth="400.0" wrapText="true">
+                                                        <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                        </font>
+                                                    </TextArea>
+                                                </content>
+                                            </CustomMenuItem>
+                                        </items>
+                                    </Menu>
+                                    <Menu fx:id="mn_help_changeColors" mnemonicParsing="false" text="Change colors">
+                                        <items>
+                                            <CustomMenuItem mnemonicParsing="false">
+                                                <content>
+                                                    <TextArea fx:id="ta_changeColors" editable="false" prefWidth="400.0" wrapText="true">
+                                                        <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                        </font>
+                                                    </TextArea>
+                                                </content>
+                                            </CustomMenuItem>
+                                        </items>
+                                    </Menu>
+                                    <Menu fx:id="mn_help_exit" mnemonicParsing="false" text="Exit">
+                                        <items>
+                                            <CustomMenuItem mnemonicParsing="false">
+                                                <content>
+                                                    <TextArea fx:id="ta_exit" editable="false" prefWidth="400.0" wrapText="true">
+                                                        <font>
+                                                            <Font name="System Bold" size="14.0" />
+                                                        </font>
+                                                    </TextArea>
+                                                </content>
+                                            </CustomMenuItem>
+                                        </items>
+                                    </Menu>
+                                 </items>
+                              </Menu>
+                           </items>
+                        </Menu>
+                    <MenuItem fx:id="mi_about" mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <HBox prefHeight="26.0" prefWidth="0.0">
+               <HBox.margin>
+                  <Insets left="1.0" />
+               </HBox.margin></HBox>
+            <TextField fx:id="tf_command" maxHeight="-Infinity" prefHeight="26.0" prefWidth="395.0" promptText="enter command" />
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <TabPane stylesheets="/styles/tabPane.css" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab fx:id="tab_table" text="Таблица">
+            <content>
+              <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="903.0" prefWidth="1900.0">
+                     <children>
+                        <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="866.0" prefWidth="1880.0" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                           <center>
+                                <TableView fx:id="table" maxHeight="1.7976931348623157E308" maxWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="844.0" prefWidth="1810.0" stylesheets="/styles/tableView.css" tableMenuButtonVisible="true" BorderPane.alignment="CENTER">
+                                    <columns>
+                                        <TableColumn fx:id="cl_owner" prefWidth="82.19999998807907" style="-fx-alignment: CENTER;" text="owner" />
+                                        <TableColumn fx:id="cl_id" prefWidth="62.79998779296875" style="-fx-alignment: CENTER;" text="id" />
+                                        <TableColumn fx:id="cl_name" prefWidth="81.20001220703125" style="-fx-alignment: CENTER;" text="name" />
+                                        <TableColumn fx:id="cl_x" prefWidth="38.19999694824219" style="-fx-alignment: CENTER;" text="x" />
+                                        <TableColumn fx:id="cl_y" prefWidth="112.19998168945312" style="-fx-alignment: CENTER;" text="y" />
+                                        <TableColumn fx:id="cl_realHero" prefWidth="64.199951171875" style="-fx-alignment: CENTER;" text="realHero" />
+                                        <TableColumn fx:id="cl_hasToothpick" prefWidth="86.20001220703125" style="-fx-alignment: CENTER;" text="hasToothpick" />
+                                        <TableColumn fx:id="cl_impactSpeed" prefWidth="99.20001220703125" style="-fx-alignment: CENTER;" text="impactSpeed" />
+                                        <TableColumn fx:id="cl_soundtrackName" prefWidth="202.20001220703125" style="-fx-alignment: CENTER;" text="soundtrackName" />
+                                        <TableColumn fx:id="cl_minutesOfWaiting" prefWidth="111.99993896484375" style="-fx-alignment: CENTER;" text="minutesOfWaiting" />
+                                        <TableColumn fx:id="cl_mood" minWidth="0.0" prefWidth="61.0" style="-fx-alignment: CENTER;" text="mood" />
+                                        <TableColumn fx:id="cl_coolCar" prefWidth="63.0" style="-fx-alignment: CENTER;" text="coolCar" />
+                                        <TableColumn fx:id="cl_creationDate" prefWidth="157.4000244140625" style="-fx-alignment: CENTER;" text="creationDate" />
+                                    </columns>
+                                 <BorderPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </BorderPane.margin>
+                                </TableView>
+                           </center>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tab_visualisation" text="Визуализация">
+            <content>
+              <AnchorPane fx:id="visualPane" prefWidth="1900.0">
+                     <children>
+                        <Group fx:id="visual_group" autoSizeChildren="false" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

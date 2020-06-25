@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.gui.controllers.MainSceneController">
+   <children>
+      <BorderPane AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+         <bottom>
+            <BorderPane prefHeight="30.0" BorderPane.alignment="CENTER">
+               <bottom>
+                  <BorderPane prefHeight="33.0" BorderPane.alignment="CENTER">
+                     <center>
+                        <Button fx:id="btn_logOut" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="121.0" style="-fx-background-color: coral;" text="Log out" textFill="WHITE" BorderPane.alignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                     </center>
+                  </BorderPane>
+               </bottom>
+            </BorderPane>
+         </bottom>
+         <top>
+            <HBox alignment="CENTER" prefHeight="42.0" prefWidth="310.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="lbl_user" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="30.0" text="User">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="tf_user" editable="false" prefHeight="30.0" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+         <center>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="310.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="lbl_numOfObjects" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="30.0" text="Objects">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets right="10.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="tf_numOfObjects" editable="false" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="10.0" right="10.0" />
+               </BorderPane.margin>
+            </HBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
