@@ -71,8 +71,8 @@ public class Client {
         while (true) {
             try {
                 JSch jsch = new JSch();
-                Session session = jsch.getSession("s285691", "se.ifmo.ru", 2222);
-                session.setPassword("rty686");
+                Session session = jsch.getSession("user", "host", 22);
+                session.setPassword("password");
                 session.setConfig("StrictHostKeyChecking", "no");
                 session.connect();
 
