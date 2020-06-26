@@ -12,9 +12,9 @@ import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
 
 public class DataBase {
-    private static final String URL = "jdbc:postgresql://pg:5432/studs";
-    private static final String USER = "s285691";
-    private static final String PASSWORD = "rty686";
+    private static final String URL = "jdbc:postgresql://host:5432/name";
+    private static final String USER = "user";
+    private static final String PASSWORD = "password";
 
     private static DataBase dataBase;
 
@@ -32,12 +32,12 @@ public class DataBase {
         DriverManager.setLogWriter(new PrintWriter(System.out));
 
         /*JSch jsch = new JSch();
-        Session session = jsch.getSession(USER, "se.ifmo.ru", 2222);
+        Session session = jsch.getSession(USER, "host", 22);
         session.setPassword(PASSWORD);
         session.setConfig("StrictHostKeyChecking", "no");
         session.connect();
 
-        session.setPortForwardingL(1337, "pg", 5432);*/
+        session.setPortForwardingL(1337, "host", 5432);*/
 
 
         //Class.forName("org.postgresql.Driver");/
